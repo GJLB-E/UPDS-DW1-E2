@@ -1,0 +1,382 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Inter Local";
+    src: url("../fonts/Inter/Inter-VariableFont_opsz,wght.ttf");
+}
+
+:root {
+    --ink: #1A2126;
+    --panel: #3A4750;
+    --white: #F5F2EB;
+}
+
+body {
+    margin: 0;
+    padding: 24px 12px;
+    min-width: 320px;
+    background: var(--ink);
+    color: var(--white);
+    font-family: "Inter Local", "Montserrat", Arial, sans-serif;
+}
+
+.contenedor {
+    width: min(812px, calc(100% - 24px));
+    margin: 0 auto;
+}
+
+.panel {
+    background: var(--panel);
+    border-radius: 10px;
+}
+
+.encabezado {
+    min-height: 52px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+}
+
+.logo {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.boton-contacto,
+.boton-inicio {
+    display: inline-block;
+    background: var(--white);
+    color: var(--ink);
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 900;
+    text-align: center;
+    text-decoration: none;
+    padding: 7px 16px;
+}
+
+.principal {
+    min-height: 145px;
+    margin-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 18px;
+}
+
+.principal h1,
+.impacto h2,
+.tarjeta h2,
+.pie-titulo {
+    margin: 0;
+    font-weight: 900;
+}
+
+.principal h1 {
+    font-size: 28px;
+}
+
+.principal p {
+    max-width: 570px;
+    margin: 5px 0 10px;
+    font-size: 10.5px;
+    line-height: 1.25;
+}
+
+.caracteristicas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+    margin-bottom: 14px;
+}
+
+.tarjeta {
+    min-height: 150px;
+    text-align: center;
+    padding: 14px 12px;
+}
+
+.tarjeta h2 {
+    min-height: 40px;
+    font-size: 16.5px;
+    line-height: 1.05;
+}
+
+.tarjeta p {
+    margin: 4px 0 8px;
+    font-size: 10px;
+    line-height: 1.2;
+}
+
+.tarjeta ul {
+    display: inline-block;
+    margin: 0;
+    padding-left: 16px;
+    text-align: left;
+    font-size: 9px;
+}
+
+.impacto {
+    min-height: 188px;
+    margin-bottom: 14px;
+    padding: 14px 18px 10px;
+}
+
+.impacto h2 {
+    text-align: center;
+    font-size: 18px;
+}
+
+.contenido-impacto {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 18px;
+    min-height: 145px;
+}
+
+.imagen-mapa {
+    width: 65%;
+    max-height: 145px;
+    object-fit: contain;
+}
+
+.imagen-grafico {
+    width: 118px;
+    height: 118px;
+    object-fit: contain;
+}
+
+.pie-pagina {
+    min-height: 58px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: end;
+    padding: 8px 14px 10px;
+}
+
+.pie-izquierda,
+.pie-enlaces a {
+    font-size: 9px;
+}
+
+.pie-enlaces {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+
+.pie-enlaces a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.pie-titulo {
+    text-align: right;
+    font-size: 16px;
+}
+
+@media (max-width: 767px) {
+    body {
+        padding: 8px;
+    }
+
+    .contenedor {
+        width: min(390px, 100%);
+    }
+
+    .desktop-break {
+        display: none;
+    }
+
+    .encabezado {
+        min-height: 74px;
+        margin-bottom: 8px;
+    }
+
+    .principal {
+        min-height: 150px;
+    }
+
+    .principal h1 {
+        max-width: 250px;
+        font-size: 17px;
+    }
+
+    .caracteristicas {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+
+    .tarjeta {
+        min-height: 192px;
+        max-width: 50px;
+        display: grid;
+        grid-template-columns: 1fr;
+        place-content: center;
+    }
+
+    .tarjeta h2 {
+        min-height: auto;
+        max-width: 240px;
+        margin: 0 auto;
+        font-size: 15px;
+    }
+
+    .tarjeta ul {
+        display: none;
+    }
+
+    .tarjeta p {
+        display: block;
+        margin: 4px 0 0;
+        font-size: 9px;
+    }
+
+    .impacto {
+        min-height: 155px;
+        margin-bottom: 8px;
+    }
+
+    .impacto h2 {
+        font-size: 14px;
+    }
+
+    .contenido-impacto {
+        min-height: 110px;
+    }
+
+    .imagen-mapa {
+        width: 82%;
+        max-height: 105px;
+    }
+
+    .imagen-grafico {
+        display: none;
+    }
+
+    .pie-pagina {
+        min-height: 72px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        padding: 8px;
+    }
+
+    .pie-izquierda,
+    .pie-enlaces {
+        order: 2;
+    }
+
+    .pie-enlaces {
+        flex-wrap: wrap;
+        gap: 6px 10px;
+    }
+
+    .pie-titulo {
+        order: 1;
+        text-align: center;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        padding: 6px;
+    }
+
+    .contenedor {
+        width: calc(100% - 12px);
+    }
+
+    .encabezado {
+        min-height: 64px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        padding: 7px 16px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .boton-contacto,
+    .boton-inicio {
+        font-size: 9px;
+    }
+
+    .boton-contacto {
+        width: 60%;
+        max-width: 180px;
+        padding: 6px 12px;
+    }
+
+    .principal {
+        min-height: 138px;
+        padding: 14px 18px;
+    }
+
+    .principal h1 {
+        max-width: 220px;
+        font-size: 16px;
+    }
+
+    .principal p {
+        max-width: 260px;
+        font-size: 9px;
+    }
+
+    .caracteristicas {
+        gap: 6px;
+    }
+
+    .tarjeta {
+        min-height: 82px;
+    }
+
+    .tarjeta h2 {
+        font-size: 13px;
+    }
+
+    .impacto {
+        min-height: 148px;
+        padding: 12px 10px 8px;
+    }
+
+    .impacto h2 {
+        font-size: 12px;
+    }
+
+    .contenido-impacto {
+        min-height: 108px;
+    }
+
+    .imagen-mapa {
+        width: 88%;
+        max-height: 98px;
+    }
+
+    .pie-pagina {
+        min-height: 76px;
+    }
+
+    .pie-titulo {
+        font-size: 14px;
+    }
+
+    .pie-izquierda,
+    .pie-enlaces a {
+        font-size: 8px;
+    }
+}
